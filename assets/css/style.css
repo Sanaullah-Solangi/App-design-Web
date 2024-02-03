@@ -1,0 +1,619 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+}
+
+:root{
+
+	/*	Background Color*/
+
+	--bg-white:rgba(255, 255, 255, 1.0);
+	--bg-black:rgba(44, 44, 44, 1.0);
+	--bg-light-pink:rgba(255, 0, 126, 1.0);
+	--bg-light-gray:rgba(246, 249, 254, 1.0);
+	--bg-gradient:linear-gradient(to top, rgba(255, 0, 126, 1.0) 0%,  rgba(142, 0, 116, 1.0) 100%);
+	--bg-card-shadow:2px 2px 20px rgba(0, 0, 0, 0.6);
+	--bg-light-gray:rgb(238, 238, 238);
+
+
+
+	/*	Text Color*/
+	--primary-font:"poppins", sans-serif;
+	--text-white:rgba(255, 255, 255, 1.0);
+	--text-black:rgba(44, 44, 44, 1.0);
+	--text-light-black:rgb(68, 68, 68);
+	--text-light-pink:rgba(255, 0, 126, 1.0);
+	--text-light-gray:rgba(126, 128, 133, 1.0);
+}
+
+/*=============== Common CSS ====
+=================================*/
+
+section{
+	padding-top: 100px;
+}
+
+body{
+	font-family: var(--primary-font);
+	color: var(--bg-black);
+	overflow-x: hidden;
+}
+ .container{
+	width: 100vw;
+	margin: 0 auto;
+}
+
+/*===================================== header section css ===========================================*/
+
+header {
+	position: fixed;
+	z-index: 500;
+	background: var(--bg-white);
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	box-shadow: 0px 0px 10px var(--bg-black);
+}
+
+header .navbar{
+	padding: 0px;
+	margin: 0px;
+}
+/* header logo style */
+
+header .logo img{
+/*	background-image: url('../images/download.1.png');*/
+	border-radius: 20px;
+	width: 20vw;
+}
+
+/* header menu style */
+
+header #navbarNav ul {
+	padding: 0px;
+	margin: 0px;
+}
+header #navbarNav ul li a{
+	font-size: 1.3rem;
+	font-weight: bold;
+	font-family: var(--primary-font);
+	transition: 500ms;
+	position: relative;
+	margin: 0px 4px 0px 0px;
+/*	background: linear-gradient(to top right,rgba(0, 0, 0, 0.5), rgba(150, 150, 150, 1.0));*/
+	border-radius: 10px;
+	-we/*bkit-background-clip:text;
+	col*/or: transparent;
+}
+
+header #navbarNav ul li a:hover{
+	background-color: rgba(190, 190, 190, 0.8);
+}
+
+/*	Menu before border effect*/
+/*
+header #navbarNav ul li a:before{
+	content:'';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 0%;
+	height: 2px;
+	border-radius: 100px;
+	background: var(--bg-black);
+	transition: 200ms;
+}
+header #navbarNav ul li a:hover:before{
+	width: 100%;
+	transition: 500ms;
+}
+*/
+/*	Menu after after effect*/
+
+/*header #navbarNav ul li a:after{
+	content:'';
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 0%;
+	height: 2px;
+	border-radius: 100px;
+	background: var(--bg-black);
+	transition: 200ms;
+}
+header #navbarNav ul li a:hover:after{
+	width: 100%;
+	transition: 500ms;
+
+}*/
+/*===================================== Home Section CSS ===========================================*/
+
+/*Home background style*/
+
+#home{
+	min-height: 900px;
+	height: 100%;
+	overflow-x: hidden;
+	background-image: url('../images/bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*Home Heading style*/
+
+#home .home-text h1{
+	font-size: 4rem;
+	font-weight: bold;
+	color: var(--text-white);
+}
+
+/*Home paragraph style*/
+
+#home .home-text p{
+	color: var(--text-white);
+	font-size: ;
+}
+
+/*Home button style*/
+
+ .btn{
+	box-shadow: 0px 2px 13px rgba(255, 255, 255, 0.3);
+	margin-top: 5px;
+	font-size: 1.3rem;
+	width: 150px;
+	border-radius: 5px;
+	background: var(--bg-gradient);
+	color: var(--text-white);
+	animation: floatingbtn;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-fill-mode: linear;
+	transition: 1s;
+}
+/*
+@keyframes floatingbtn{
+	0%{
+		font-size: 1.5rem;
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(8px);
+		font-size: 1.4rem;	
+	}
+	100%{
+		font-size: 1.5rem;
+		transform: translateY(0px);
+	}
+}*/
+
+.btn:hover{
+	box-shadow: none;
+	transform: translateY(-5px);
+	color: var(--text-white);
+	transition: 500ms;
+}
+
+/*Home Main Image style*/
+
+#home .home-image{
+	text-align: right;
+	transform: rotatez(20deg);
+}
+
+#home .home-image img{
+/*	width: 27vw;*/
+	animation: floatingimage;
+	animation-iteration-count: infinite;
+	animation-fill-mode: linear;
+	animation-duration: 3s;
+}
+@keyframes floatingimage{
+	0%,100%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(30px);
+	}
+}
+
+/*===================================== Counter Section CSS ===========================================*/
+
+#counter-area{
+	padding: 100px 0px;
+}
+.counter-rapper{
+	position: relative;
+}
+.counter-item span{
+	background: var(--bg-gradient);
+	font-weight: bold;
+	font-size: 4rem;
+	-webkit-background-clip:text;
+	color:transparent;
+}
+.counter-rapper:after{
+	content: '';
+	position: absolute;
+	height: 50%;
+	width: 3px;
+	top: 50%;
+	right: 0%;
+	background-color: var(--bg-black);
+	opacity: 0.20;
+	transform: translateY(-50%);
+}
+.counter-rapper:last-child:after{
+	display: none;
+}
+.counter-inner h5{
+	font-size: 1.5rem;
+	font-weight: bolder;
+	margin-top: 15px;
+	color: var(--text-light-pink);
+}
+/*===================================== Home's promo Section CSS ===========================================*/
+
+.promo-section{
+	padding: 50px 10px;
+}
+.promo-headline h2{
+	line-height: 1.5;
+	font-size: 40px;
+	position: relative;
+	margin-bottom: 30px;
+}
+.promo-headline h2:after{
+	content: '';
+	position: absolute;
+	border-radius: 100px;
+	height: 3px;
+	width: 50px;
+	left: 45%;
+	bottom: -10px;
+	background: var(--bg-gradient);
+}
+.promo-headline h2 span{
+	font-weight: 400;
+	font-size: 1.9rem;
+}
+.promo-headline{
+	margin-bottom: 50px;
+}
+.promo-item{
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+	padding: 20px 5px;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	transition: 500ms;
+}
+.promo-item:hover{
+	box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);			
+	transition: 500ms;
+}
+.promo-item:after{
+	content: '';
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	height: 4px;
+	width: 0%;
+	background: var(--bg-gradient);
+	transition: 300ms;
+}
+.promo-item:hover:after{
+	width: 100%;
+	transition: 300ms;
+}/*
+.promo-item .promo-icon{
+	margin:  0px auto 10px auto;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	position: relative;*/
+}
+.promo-icon img{
+	width: 100%;
+}
+.promo-icon i{
+/*	position: absolute;*/
+	font-size: 30px;
+	/*left: 35%;
+	top: 35%;
+*/	display: block;
+	color: var(--text-white);
+	background-image: url('../images/promo-icon-bg.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 50px;
+}
+.promo-item h5{
+	background: var(--bg-gradient);
+	-webkit-background-clip: text;
+	color: transparent;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/*===================================== features Section CSS ===========================================*/
+
+.title{
+	background-image: url(../images/feature-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 800px;
+	padding-top: 100px;
+	overflow-x: hidden;
+}
+.features-heading{
+	text-align: left;
+}
+.features-heading h2{
+	font-size: 40px;
+}
+.features-heading h2,
+.features-heading p{
+	color: var(--text-white);
+}
+.features-image{
+	text-align: right;
+	margin-top: -70px;
+}
+.features-image img{
+	width: 35vw;
+	height: auto;
+}
+.margin-top{
+	margin-top: -350px;
+}
+.features-box{
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
+	padding: 15px;
+	position: relative;
+	background-color: var(--bg-white);
+	margin: 20px 50px;
+	transition: 500ms;
+}
+.features-box:hover{
+	background: var(--bg-gradient);
+	color: var(--text-white);
+	transition: 500ms;
+}
+.features-box h4,
+.features-box p{
+	line-height: 2;
+}
+.features-box h4{
+	font-weight: 600;
+	margin-top: 20px;
+	position: relative;
+}
+.features-box h4:after{
+	position: absolute;
+	content:'';
+	bottom: 0px;
+	left: 0px;
+	background: var(--bg-gradient);
+	width: 20%;
+	height: 4px;
+}
+.features-box i{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 25px;
+	padding: 15px;
+	border-bottom-left-radius: 20px;
+	background: var(--bg-gradient);
+	color: var(--text-white);
+}
+
+/*===================================== Price Section CSS ===========================================*/
+#price-section{
+	margin-bottom: 200px;
+}
+.price-headline h1{
+	font-weight: 500;
+	font-size: 40px;
+	margin-bottom: 30px;	
+	position: relative;
+}
+.price-headline h1:after{
+	content: '';
+	position: absolute;
+	border-radius: 100px;
+	height: 3px;
+	width: 50px;
+	left: 45%;
+	bottom: -15px;
+	background: var(--bg-gradient);
+}
+.price-headline p{
+	margin-bottom: 50px;
+	line-height: 2;
+}
+.price-card{
+	text-align: center;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	position: relative;
+	padding: 20px 0px 20px 0px;
+	transition: 500ms;
+	border-radius: 10px;
+	margin-bottom: 50px;
+}
+.price-card:hover{
+	margin-top: -10px;
+	cursor: pointer;
+	transition: 300ms;
+}
+.price-card .month{
+	background: var(--bg-gradient);
+	padding: 13px 5px;
+	position: absolute;
+	font-size: 12px;
+	top: 30px;
+	right: 0px;
+	color: var(--text-white);
+	transform: rotate(-90deg);
+	width: 100px;
+}
+.price-card .month:before{
+	content: '';
+	position: absolute;
+	background: var(--bg-light-pink);
+	padding: 15px;
+	top: 7px;
+	left: -15px;
+	transform: rotate(45deg);
+}
+.price-card h5{
+	background: var(--bg-gradient);
+	-webkit-background-clip: text;
+	color: transparent;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.price-card .price-icone{
+	border-right: 5px dashed var(--text-light-pink);
+	border-bottom: 5px solid var(--bg-light-pink);
+	width: 70px;
+	height: 70px;
+	margin: 50px auto 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+.price-card .icon-circle{
+	background: var(--bg-gradient);
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-white);
+}
+.price-card .icon-circle i{
+	font-size: 20px;
+}
+.price-card .doller h2{
+	font-weight: bold;
+	font-size: 40px;
+}
+.price-card span{
+	vertical-align: super;
+	font-size: 25px;
+}
+
+.price-card ul li{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	line-height: 2.2;
+	font-weight: bold;
+}
+#active-price{
+	background: var(--bg-gradient);
+	color: var(--text-white);
+}
+#active-price h5{
+	color: var(--text-white);
+}
+/*===================================== contact Section CSS ===========================================*/
+#contact{
+/*	height: 100vh;*/
+	padding: 100px 0px 100px 0px;
+	background: var(--bg-light-gray);
+	overflow-x: hidden;
+}
+	.contact-heading h5{
+	font-size: 17px;
+	font-weight: bolder;
+	text-shadow: 0px 0px 1px var(--text-light-pink);
+	background: var(--bg-gradient);
+	color: transparent;
+	-webkit-background-clip:text;
+}
+
+.contact-heading h1:after{
+	content: '';
+	position: absolute;
+	border-radius: 100px;
+	height: 3px;
+	width: 50px;
+	left: 45%;
+	bottom: -10px;
+	background: var(--bg-gradient);
+}
+.contact-heading h1{
+	font-weight: bold;
+	font-size: 50px;
+	margin-bottom: 50px;
+	position: relative;
+}
+.contact-content h3{
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.contact-content .info li{
+	font-size: 20px;
+	padding-right: 15px;
+	padding-top: 10px;
+}
+.contact-content .info li i{
+	font-size: 25px;
+}
+.contact-content form{
+	text-align: center;
+}
+.contact-content .contact-info{
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+}
+.contact-content textarea{
+	height: 100px;
+}
+.contact-content .contact-info:focus{
+	border: none;
+	outline: none;
+}
+/*===================================== Footer Section CSS ===========================================*/
+#footer{
+	padding: 20px;
+	background: var(--bg-gradient);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#footer .part-one{
+	color: var(--text-white);	
+}
+.arrow-up{
+	text-decoration: none;
+	background: var(--bg-gradient);
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	color: var(--text-white);
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 500;
+	position: fixed;
+	right: 10px;
+	bottom: 5px;
+}
+.arrow-up i{
+	color: var(--text-white);
+}
